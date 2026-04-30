@@ -48,9 +48,13 @@ brew install node
 
 ---
 
-## Step 2 - Download this repo
+## Step 2 - Get this repo
 
-**Easiest (no Git needed):**
+**Option A - Fork (recommended)**
+
+Click **Fork** at the top right of this page. You get your own copy on GitHub that you can update anytime.
+
+**Option B - Download ZIP (no account needed)**
 
 1. Click the green **Code** button at the top of this page
 2. Click **Download ZIP**
@@ -59,10 +63,10 @@ brew install node
    - **Windows:** right-click inside the folder → **Open in Terminal**
    - **Mac:** right-click the folder → **New Terminal at Folder** (or drag into Terminal)
 
-**Alternative (if you have Git):**
+**Option C - Git clone**
 
 ```bash
-git clone https://github.com/theaussie86/ai-setup-kit.git
+git clone https://github.com/weissteiner-automation/ai-setup-kit.git
 cd ai-setup-kit
 ```
 
