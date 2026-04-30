@@ -19,37 +19,29 @@ Node.js is the only thing you need to install manually. The setup script handles
 
 ### Windows
 
-1. Go to [nodejs.org](https://nodejs.org) and download the **LTS** installer (.msi)
+1. Go to [nodejs.org/en/download](https://nodejs.org/en/download) - select **Windows**
 
-<!-- Screenshot: nodejs.org download page, LTS button highlighted -->
-> **Screenshot coming soon**
+![nodejs.org download page - Windows](assets/nodejs-download-windows.png)
 
-2. Run the installer, click through - all defaults are fine
+2. Scroll down to **"Or get a prebuilt Node.js® for"** - click **Windows Installer (.msi)**
+3. Run the installer, click through - all defaults are fine
+4. Open **Command Prompt** (`Win + R` → type `cmd` → Enter)
+5. Verify: `node --version` should print something like `v24.x.x`
 
-<!-- Screenshot: Node.js installer wizard -->
-> **Screenshot coming soon**
-
-3. Open **Command Prompt** (`Win + R` → type `cmd` → Enter)
-4. Verify: `node --version` should print something like `v22.x.x`
-
-<!-- Screenshot: cmd showing node --version output -->
-> **Screenshot coming soon**
+> Windows installer and cmd screenshots to be added - take them on a Windows machine.
 
 ---
 
 ### Mac
 
-**Option A - Installer (recommended for beginners)**
+1. Go to [nodejs.org/en/download](https://nodejs.org/en/download) - macOS is selected by default
 
-1. Go to [nodejs.org](https://nodejs.org) and download the **LTS** installer (.pkg)
+![nodejs.org download page - macOS](assets/nodejs-download-mac.png)
 
-<!-- Screenshot: nodejs.org download page, macOS pkg download -->
-> **Screenshot coming soon**
-
-2. Run the `.pkg` installer, click through
-
-3. Open **Terminal** (Spotlight: `Cmd + Space` → type `Terminal`)
-4. Verify: `node --version`
+2. Scroll down to **"Or get a prebuilt Node.js® for"** - click **macOS Installer (.pkg)**
+3. Run the `.pkg` installer, click through
+4. Open **Terminal** (Spotlight: `Cmd + Space` → type `Terminal`)
+5. Verify: `node --version`
 
 **Option B - Homebrew**
 
@@ -83,8 +75,7 @@ The script will:
 3. Install Claude Code CLI
 4. Ask if you want Playwright (browser automation) - optional
 
-<!-- Screenshot: terminal running node setup.js, showing OK checkmarks -->
-> **Screenshot coming soon**
+> Screenshot: run on your machine once and capture the terminal output.
 
 ---
 
@@ -98,8 +89,7 @@ claude
 
 Follow the login prompt to connect your Anthropic account.
 
-<!-- Screenshot: claude CLI first launch, login prompt -->
-> **Screenshot coming soon**
+> Screenshot: capture on first run.
 
 ---
 
