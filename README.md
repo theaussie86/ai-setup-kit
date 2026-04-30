@@ -51,15 +51,23 @@ brew install node
 
 ---
 
-## Step 2 - Clone this repo
+## Step 2 - Download this repo
+
+**Easiest (no Git needed):**
+
+1. Click the green **Code** button at the top of this page
+2. Click **Download ZIP**
+3. Extract the ZIP somewhere (e.g. Desktop)
+4. Open the extracted folder in your terminal:
+   - **Windows:** right-click inside the folder → **Open in Terminal**
+   - **Mac:** right-click the folder → **New Terminal at Folder** (or drag into Terminal)
+
+**Alternative (if you have Git):**
 
 ```bash
-# Windows (Command Prompt) or Mac (Terminal):
 git clone https://github.com/YOUR_USERNAME/ai-setup-kit.git
 cd ai-setup-kit
 ```
-
-No git? Download the ZIP from GitHub → Extract → open folder in terminal.
 
 ---
 
