@@ -65,7 +65,7 @@ brew install node
 **Alternative (if you have Git):**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-setup-kit.git
+git clone https://github.com/theaussie86/ai-setup-kit.git
 cd ai-setup-kit
 ```
 
