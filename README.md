@@ -1,116 +1,128 @@
-# AI Agent Environment Setup
+# AI Computer Setup
 
-Cross-platform setup kit for AI agent environments. Installs Python (via uv) and Claude Code CLI with one command - on Windows and Mac.
+Dieses Repository richtet deinen Computer so ein, dass KI-Assistenten wie **Claude** oder **Codex** nicht nur Fragen beantworten - sondern echte Aufgaben auf deinem Computer erledigen können.
 
-## What gets installed
-
-| Tool | Purpose |
-|------|---------|
-| [uv](https://docs.astral.sh/uv/) | Python version + package manager |
-| Python 3.12 | Runtime for AI scripts and automations |
-| [Claude Code CLI](https://claude.ai/code) | AI agent in your terminal |
-| Playwright *(optional)* | Browser automation |
+**Was danach möglich ist:**
+- KI öffnet Dateien, liest sie und bearbeitet sie direkt
+- KI führt Skripte aus und automatisiert wiederkehrende Aufgaben
+- KI steuert den Browser und erledigt Web-Aufgaben automatisch
+- Alles gesteuert über die gewohnte Chat-Oberfläche (Claude Desktop / Codex Desktop)
 
 ---
 
-## Step 1 - Install Node.js
+## Wie es funktioniert
 
-Node.js is the only thing you need to install manually. The setup script handles everything else.
-
-### Windows
-
-1. Go to [nodejs.org/en/download](https://nodejs.org/en/download)
-2. Select **Windows** in the OS dropdown
-3. Scroll down to **"Or get a prebuilt Node.js® for"** - click **Windows Installer (.msi)**
-4. Run the installer - click through, all defaults are fine
-5. Open **Command Prompt**: `Win + R` → type `cmd` → Enter
-6. Verify: type `node --version` - should print `v24.x.x`
-
-![nodejs.org download page - Windows](assets/nodejs-download-windows.png)
-
----
-
-### Mac
-
-1. Go to [nodejs.org/en/download](https://nodejs.org/en/download) - macOS is selected by default
-2. Scroll down to **"Or get a prebuilt Node.js® for"** - click **macOS Installer (.pkg)**
-3. Run the `.pkg` installer - click through
-4. Open **Terminal**: Spotlight `Cmd + Space` → type `Terminal` → Enter
-5. Verify: type `node --version` - should print `v24.x.x`
-
-![nodejs.org download page - macOS](assets/nodejs-download-mac.png)
-
-**Option B - Homebrew**
-
-```bash
-brew install node
+```
+Du chattest in der Desktop-App
+        ↓
+KI bekommt Zugriff auf deinen Computer
+        ↓
+KI führt Aufgaben lokal aus (Dateien, Skripte, Browser)
+        ↓
+Ergebnis kommt zurück in den Chat
 ```
 
----
-
-## Step 2 - Get this repo
-
-**Option A - Fork (recommended)**
-
-Click **Fork** at the top right of this page. You get your own copy on GitHub that you can update anytime.
-
-**Option B - Download ZIP (no account needed)**
-
-1. Click the green **Code** button at the top of this page
-2. Click **Download ZIP**
-3. Extract the ZIP somewhere (e.g. Desktop)
-4. Open the extracted folder in your terminal:
-   - **Windows:** right-click inside the folder → **Open in Terminal**
-   - **Mac:** right-click the folder → **New Terminal at Folder** (or drag into Terminal)
-
-**Option C - Git clone**
-
-```bash
-git clone https://github.com/weissteiner-automation/ai-setup-kit.git
-cd ai-setup-kit
-```
+Die Desktop-App ist dein Interface - das hier ist der Motor dahinter.
 
 ---
 
-## Step 3 - Run setup
+## Einrichtung
+
+### Schritt 1 - Node.js installieren
+
+Node.js ist die einzige Voraussetzung, die du manuell installierst. Alles andere übernimmt das Setup-Script.
+
+**Windows:**
+
+1. Gehe zu [nodejs.org/en/download](https://nodejs.org/en/download)
+2. Wähle **Windows** im OS-Dropdown
+3. Scrolle zu **"Or get a prebuilt Node.js® for"** - klicke **Windows Installer (.msi)**
+4. Installer ausführen - alle Standardeinstellungen beibehalten
+5. **Eingabeaufforderung** öffnen: `Win + R` → `cmd` → Enter
+6. Prüfen: `node --version` sollte `v24.x.x` ausgeben
+
+![nodejs.org Download-Seite - Windows](assets/nodejs-download-windows.png)
+
+---
+
+**Mac:**
+
+1. Gehe zu [nodejs.org/en/download](https://nodejs.org/en/download) - macOS ist standardmäßig ausgewählt
+2. Scrolle zu **"Or get a prebuilt Node.js® for"** - klicke **macOS Installer (.pkg)**
+3. Installer ausführen - durchklicken
+4. **Terminal** öffnen: Spotlight `Cmd + Space` → `Terminal` → Enter
+5. Prüfen: `node --version` sollte `v24.x.x` ausgeben
+
+![nodejs.org Download-Seite - macOS](assets/nodejs-download-mac.png)
+
+---
+
+### Schritt 2 - Dieses Repository holen
+
+**Option A - Fork (empfohlen)**
+
+Klicke oben rechts auf **Fork**. Du bekommst deine eigene Kopie, die du jederzeit anpassen kannst.
+
+**Option B - ZIP herunterladen (kein Account nötig)**
+
+1. Klicke oben auf den grünen **Code**-Button
+2. Klicke **Download ZIP**
+3. ZIP entpacken (z.B. auf dem Desktop)
+4. Ordner im Terminal öffnen:
+   - **Windows:** Rechtsklick im Ordner → **In Terminal öffnen**
+   - **Mac:** Rechtsklick auf Ordner → **Neues Terminal bei Ordner**
+
+---
+
+### Schritt 3 - Setup ausführen
 
 ```bash
 node setup.js
 ```
 
-The script will:
-1. Install `uv` (Python manager)
-2. Install Python 3.12
-3. Install Claude Code CLI
-4. Ask if you want Playwright (browser automation) - optional
+Das Script installiert automatisch:
+1. **uv** - Python-Paketverwaltung
+2. **Python 3.12** - Laufzeitumgebung für Automatisierungen
+3. **Claude Code CLI** - Kommandozeilen-Interface für Claude
+4. **Playwright** *(optional)* - Browser-Automatisierung
 
 ---
 
-## Step 4 - Start Claude Code
+### Schritt 4 - Desktop-App einrichten
 
-Open a **new** terminal window (important - so PATH updates take effect), then:
+**Claude Desktop** - [claude.ai/download](https://claude.ai/download)
+- Nach Installation: Einstellungen → Developer → MCP-Server aktivieren
 
-```bash
-claude
-```
-
-Follow the login prompt to connect your Anthropic account.
+**Codex Desktop** - [platform.openai.com/codex](https://platform.openai.com/codex)
+- Nach Installation: Login mit OpenAI-Account
 
 ---
 
-## Troubleshooting
+## Was jetzt möglich ist
 
-**`node` not found after install (Windows)**
-Close and reopen Command Prompt. The PATH only updates in new windows.
+Sobald alles eingerichtet ist, kannst du der KI in der Desktop-App Aufgaben geben wie:
 
-**`uv` not found after setup**
-Close and reopen your terminal, then run `uv --version` to verify.
+- *"Lies alle Excel-Dateien im Ordner Downloads und erstelle eine Zusammenfassung"*
+- *"Öffne unsere Angebots-Vorlage und fülle sie mit diesen Daten aus"*
+- *"Prüfe jeden Morgen unsere Website auf Fehler und schicke mir einen Bericht"*
 
-**Permission error on Mac**
-Run with: `sudo node setup.js`
+Die KI hat jetzt die Werkzeuge, das wirklich zu tun - nicht nur zu erklären wie es geht.
 
-**Playwright install fails**
-Run manually after setup:
+---
+
+## Fehlerbehebung
+
+**`node` nicht gefunden nach Installation (Windows)**
+Terminal schließen und neu öffnen. PATH wird nur in neuen Fenstern aktualisiert.
+
+**`uv` nicht gefunden nach Setup**
+Terminal schließen, neu öffnen, dann `uv --version` prüfen.
+
+**Berechtigung verweigert (Mac)**
+Mit `sudo node setup.js` ausführen.
+
+**Playwright-Installation schlägt fehl**
+Manuell nach dem Setup ausführen:
 ```bash
 uv pip install playwright
 uv run playwright install chromium
