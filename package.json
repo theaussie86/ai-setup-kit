@@ -1,0 +1,11 @@
+{
+  "name": "ai-setup-kit",
+  "version": "1.0.0",
+  "description": "Cross-platform setup kit for AI agent environments (Windows + Mac)",
+  "scripts": {
+    "setup": "node setup.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
